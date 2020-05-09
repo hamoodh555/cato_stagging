@@ -14,33 +14,6 @@ ${Creator_status_abrt}    Aborted
 ${alert_txt}      Program already exists for the given period
 
 *** Test Cases ***
-Search and delete program
-    ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${chrome_options}   add_argument    headless
-    Call Method    ${chrome_options}   add_argument    disable-gpu
-    Call Method    ${chrome_options}   add_argument    no-sandbox
-
-
-    SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
-    SeleniumLibrary.Set Window Size    1920    1080
-    SeleniumLibrary.Go to    ${url} 
-
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
-    SeleniumLibrary.Click Button    id=form_login
-    Sleep    20s
-    SeleniumLibrary.Click Element    xpath=.//a[@ng-click='goCampaign()']
-    Sleep    5s
-    SeleniumLibrary.Input Text    id=search    ${Program_title}
-    Sleep    5s
-    SeleniumLibrary.Click Element    xpath=.//span[@class='sprite-globe icondel']
-    Sleep    5s
-    SeleniumLibrary.Click Element    xpath=.//button[@ng-click='deleteConversation()']
-    Sleep    5s
-    SeleniumLibrary.Click Element    xpath=.//*[@id='commonAlert']/div/div/div/div[2]/div/div/div/div/button
-    SeleniumLibrary.Close Browser
-    
 To create a new campaign by manual flow	
     
     ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
@@ -50,11 +23,11 @@ To create a new campaign by manual flow
 
 
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
-	SeleniumLibrary.Set Window Size    1920    1080
+    SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    cvmcreator      
+    SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Wait Until Element Is Enabled    xpath=.//li[@ng-click='createNewProgram()']    60s
@@ -118,18 +91,18 @@ To create a new campaign by manual flow
     SeleniumLibrary.Close Browser
 
 Review and Approve a campaign
-	${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${chrome_options}   add_argument    headless
     Call Method    ${chrome_options}   add_argument    disable-gpu
     Call Method    ${chrome_options}   add_argument    no-sandbox
 
 
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
-	SeleniumLibrary.Set Window Size    1920    1080
+    SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
     SeleniumLibrary.Input Text    id=form_username    reviewers
-    SeleniumLibrary.Input Text    id=form_password    reviewers@123
+    SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Click Element    xpath=(.//*[contains(@class,'cname') and contains(text(),'Program for Cross-sell Savings Accounts Volatile account balances')]/parent::*/parent::*/parent::*//*[@ng-click='conApproveCamp(x)'])[1]
@@ -154,8 +127,8 @@ Create campaign from marketing module
 	SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    cadmin    
+    SeleniumLibrary.Input Text    id=form_password    Cadmin@2020    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    40s
     SeleniumLibrary.Click Element    xpath=(.//span[@class='admin-box'])[1]
@@ -224,8 +197,8 @@ Review and Approve a campaign
 	SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    reviewers   
+    SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Click Element    xpath=(.//*[contains(@class,'cname') and contains(text(),'Program for Cross-sell Savings Accounts Volatile account balances')]/parent::*/parent::*/parent::*//*[@ng-click='conApproveCamp(x)'])[1]
@@ -249,8 +222,8 @@ To create successful campaign in Prospect cloud
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    cvmcreator    
+    SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Wait Until Element Is Enabled    xpath=.//li[@ng-click='createNewProgram()']    60s
@@ -283,8 +256,8 @@ Review and Abort a campaign
 	SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    reviewers    
+    SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Click Element    xpath=(.//*[contains(@class,'cname') and contains(text(),'Program for Cross-sell Savings Accounts Volatile account balances')]/parent::*/parent::*/parent::*//*[@class='sprite-globe iconabort'])[1]
@@ -307,8 +280,8 @@ Review and Reject a Campaign
 	SeleniumLibrary.Set Window Size    1920    1080	
     SeleniumLibrary.Go to    ${url}
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    reviewers    
+    SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Click Element    xpath=(.//*[contains(@class,'cname') and contains(text(),'Program for Cross-sell Savings Accounts Volatile account balances')]/parent::*/parent::*/parent::*//*[@ng-click='conOpenRejectModal(x)'])[1]
@@ -331,8 +304,8 @@ Review and approve campaign by compliance head
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    compliancehead    
+    SeleniumLibrary.Input Text    id=form_password    compliancehead    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Click Element    xpath=.//*[@ng-click='rejectConversation()']
@@ -349,8 +322,8 @@ Review and approve campaign by design head
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    creatorhead    
+    SeleniumLibrary.Input Text    id=form_password    creatorhead    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Click Element    xpath=.//*[@ng-click='rejectConversation()']
@@ -411,8 +384,8 @@ One click campaign in wheel
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    cvmcreator    
+    SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    10s
     SeleniumLibrary.Click Element    xpath=.//li[@ng-click='createNewProgram()']
@@ -430,8 +403,8 @@ Valid credential
     Sleep	20s
     SeleniumLibrary.Element Text Should Be    //label[@class='loginLabel']    Username
     SeleniumLibrary.Element Text Should Be    //label[@for='form_password']    Password
-    SeleniumLibrary.Input Text    id=form_username    
-    SeleniumLibrary.Input Text    id=form_password    
+    SeleniumLibrary.Input Text    id=form_username    cvmcreator    
+    SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019    
     SeleniumLibrary.Click Button    form_login
     SeleniumLibrary.Close Browser
 	
