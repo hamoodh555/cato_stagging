@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200501 22:19:27.733" generator="Robot 3.1.2 (Python 2.7.17 on win32)">
+<suite source="H:\Logi\Robot_Pro\Test_CVM\Test_Suit_Cato.robot" id="s1" name="Test Suit Cato">
+<test id="s1-t1" name="Valid Credentials Test">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200501 22:20:21.937" level="INFO">Opening browser 'chrome' to base url 'http://cvm.xerago.net/'.</msg>
+<status status="PASS" endtime="20200501 22:21:57.463" starttime="20200501 22:20:21.933"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200501 22:21:58.735" starttime="20200501 22:21:57.463"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//div[@class='login-footertxt']/p</arg>
+</arguments>
+<status status="PASS" endtime="20200501 22:21:58.966" starttime="20200501 22:21:58.736"></status>
+</kw>
+<kw name="Element Text Should Be">
+<arguments>
+<arg>//label[@class='loginLabel']</arg>
+<arg>Username</arg>
+</arguments>
+<msg timestamp="20200501 22:21:58.970" level="FAIL">Multiple keywords with name 'Element Text Should Be' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Element Text Should Be
+    SeleniumLibrary.Element Text Should Be</msg>
+<status status="FAIL" endtime="20200501 22:21:58.970" starttime="20200501 22:21:58.970"></status>
+</kw>
+<status status="FAIL" endtime="20200501 22:21:58.974" critical="yes" starttime="20200501 22:20:21.933">Multiple keywords with name 'Element Text Should Be' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Element Text Should Be
+    SeleniumLibrary.Element Text Should Be</status>
+</test>
+<status status="FAIL" endtime="20200501 22:21:59.090" starttime="20200501 22:19:27.749"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Test Suit Cato" pass="0">Test Suit Cato</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
