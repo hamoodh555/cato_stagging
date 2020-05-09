@@ -25,8 +25,10 @@ To create a new campaign by manual flow
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    cvmcreator      
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s    
+    Sleep    20s
+    SeleniumLibrary.Input Text    id=form_username    cvmcreator  
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -100,8 +102,10 @@ Review and Approve a campaign
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    reviewers
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -127,7 +131,9 @@ Create campaign from marketing module
 	SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    cadmin    
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    Cadmin@2020    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    40s
@@ -196,8 +202,10 @@ Review and Approve a campaign
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
 	SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    reviewers   
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -222,7 +230,9 @@ To create successful campaign in Prospect cloud
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    cvmcreator    
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -255,8 +265,10 @@ Review and Abort a campaign
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
 	SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
-    SeleniumLibrary.Input Text    id=form_username    reviewers    
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
+    Sleep    20s
+    SeleniumLibrary.Input Text    id=form_username    reviewers
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -279,9 +291,11 @@ Review and Reject a Campaign
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
 	SeleniumLibrary.Set Window Size    1920    1080	
     SeleniumLibrary.Go to    ${url}
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p   30s
     SeleniumLibrary.Input Text    id=form_username    reviewers    
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMreviewer@2020    
+    Sleep    20s
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
     SeleniumLibrary.Click Element    xpath=(.//*[contains(@class,'cname') and contains(text(),'Program for Cross-sell Savings Accounts Volatile account balances')]/parent::*/parent::*/parent::*//*[@ng-click='conOpenRejectModal(x)'])[1]
@@ -304,7 +318,9 @@ Review and approve campaign by compliance head
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
-    SeleniumLibrary.Input Text    id=form_username    compliancehead    
+    Sleep    20s
+    SeleniumLibrary.Input Text    id=form_username    compliancehead   
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    compliancehead    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -322,7 +338,9 @@ Review and approve campaign by design head
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    creatorhead    
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    creatorhead    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -337,8 +355,10 @@ Control group feature
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    30s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    admins
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMadmin@2020
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -365,7 +385,9 @@ Control group feature
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    20s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    cvmcreator
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019
     SeleniumLibrary.Click Button    id=form_login
     Sleep    20s
@@ -384,7 +406,9 @@ One click campaign in wheel
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    40s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    cvmcreator    
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019    
     SeleniumLibrary.Click Button    id=form_login
     Sleep    10s
@@ -399,11 +423,10 @@ Valid credential
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
     SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url}
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
-    Sleep	20s
-    SeleniumLibrary.Element Text Should Be    //label[@class='loginLabel']    Username
-    SeleniumLibrary.Element Text Should Be    //label[@for='form_password']    Password
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    30s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    cvmcreator    
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    CVMdemo@2019    
     SeleniumLibrary.Click Button    form_login
     SeleniumLibrary.Close Browser
@@ -418,9 +441,10 @@ Invalid Credentials Test
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
     SeleniumLibrary.Set Window Size    1920    1080	
     SeleniumLibrary.Go to    ${url}   
-    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p
-    Sleep	20s
+    SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    30s
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_username    cvmcreators
+    Sleep    20s
     SeleniumLibrary.Input Text    id=form_password    cvmcreator@12334
     SeleniumLibrary.Click Button    form_login
     Sleep    10s
