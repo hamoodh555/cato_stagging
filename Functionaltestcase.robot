@@ -1,11 +1,9 @@
 *** Settings ***
 Library           SeleniumLibrary
-Library           Selenium2Library
 
 *** Variables ***
-${url}            https://cvm.xerago.net/
+${url}            http://staging.xerago.net/
 ${browser}        chrome
-${excelfile}      I:/testdata.xls
 ${control_val}    15
 ${Program_title}    Program for Cross-sell Savings Accounts Volatile account balances
 ${Creator_status_rej}    Rejected
